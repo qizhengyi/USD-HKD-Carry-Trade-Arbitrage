@@ -8,7 +8,7 @@ It automates **data acquisition**, **signal generation**, **threshold-based stra
 
 ---
 
-## 📊 Project Overview
+##  Project Overview
 
 In Hong Kong’s currency board system, the HKD is pegged to the USD (≈ 7.8 HKD/USD). However, when the **HKD interbank rate (HIBOR)** is significantly **lower** than the **USD overnight rate (SOFR)**, investors can exploit a carry trade opportunity:
 
@@ -20,27 +20,27 @@ This repository provides a complete analytical framework to quantify and backtes
 
 ---
 
-## ✨ Features
+##  Features
 
-- 📈 **Data Acquisition:**  
+- **Data Acquisition:**  
   - Fetch SOFR from [FRED](https://fred.stlouisfed.org/) and HIBOR from [HKMA](https://api.hkma.gov.hk)  
   - Support for local CSV input
 
-- 🔍 **Signal Generation:**  
+- **Signal Generation:**  
   - Compute daily interest differential and rolling mean  
   - Generate trading signals when the spread exceeds a threshold
 
-- 🧠 **Backtesting Engine:**  
+- **Backtesting Engine:**  
   - Simulate carry trade performance based on interest spreads  
   - Approximate PnL, cumulative equity, and risk metrics
 
-- 📊 **Performance Analysis:**  
+- **Performance Analysis:**  
   - Annualized return, max drawdown, volatility, Sharpe ratio  
   - Auto-generated visualizations (interest rates, spreads, equity curve)
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 Clone the repository and install dependencies:
 
@@ -53,7 +53,7 @@ pre-commit install  # optional
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Run with live data from FRED & HKMA:
 ```bash
@@ -81,12 +81,12 @@ After running the script (either with live data or local CSV data), the followin
   - `Rolling_Mean_Diff_pp`: Rolling mean of the differential (default: 30 days)
 
 - **Auto-generated visualizations** (saved as `.png` or displayed inline):
-  - 📈 **Interest Rate Plot:** SOFR vs HIBOR over time  
-  - 📊 **Differential Plot:** Daily interest rate differential and rolling mean  
-  - 💹 **Equity Curve:** Simulated cumulative returns from the carry trade strategy  
+  - **Interest Rate Plot:** SOFR vs HIBOR over time  
+  - **Differential Plot:** Daily interest rate differential and rolling mean  
+  - **Equity Curve:** Simulated cumulative returns from the carry trade strategy  
 
 These outputs allow you to analyze interest rate spreads, verify signal generation, and evaluate historical performance of the USD-HKD carry trade strategy.
-## 📊 Strategy Workflow
+## Strategy Workflow
 
 The backtesting engine follows a simple but robust **5-step pipeline**, transforming raw interest rate data into actionable trading signals and a simulated carry trade performance:
 
@@ -117,4 +117,4 @@ The backtesting engine follows a simple but robust **5-step pipeline**, transfor
 
 ---
 
-📈 This pipeline mirrors a real-world macro carry trade strategy and demonstrates how interest rate differentials can be systematically transformed into tradeable signals and evaluated through historical backtesting.
+This pipeline mirrors a real-world macro carry trade strategy and demonstrates how interest rate differentials can be systematically transformed into tradeable signals and evaluated through historical backtesting.
